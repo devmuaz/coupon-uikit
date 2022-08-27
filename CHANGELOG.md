@@ -1,7 +1,3 @@
-## 0.0.1+2
-
-- Updated `.gitignore` file
-
 ## 0.0.1+1
 
 - Fixed docs issue at the `CouponClipper()` constructor
