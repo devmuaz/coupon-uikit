@@ -20,7 +20,7 @@ class CouponClipper extends CustomClipper<Path> {
   ///     color: Colors.purple,
   ///   ),
   /// ),
-  /// ```b v
+  /// ```
   const CouponClipper({
     this.borderRadius = 8,
     this.curveRadius = 20,

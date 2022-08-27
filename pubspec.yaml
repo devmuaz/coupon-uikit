@@ -1,6 +1,6 @@
 name: coupon_uikit
 description: A UI kit that contains clippers and widgets which implements the shape of the coupon cards
-version: 0.0.1
+version: 0.0.1+1
 homepage: https://github.com/devmuaz/coupon_uikit
 
 environment:
@@ -14,7 +14,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^1.0.0
+  flutter_lints: ^2.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
