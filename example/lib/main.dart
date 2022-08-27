@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'samples/horizontal_coupon_example_1.dart';
 import 'samples/horizontal_coupon_example_2.dart';
