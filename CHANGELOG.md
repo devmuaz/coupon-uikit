@@ -1,3 +1,8 @@
+## 0.1.0
+
+- Added the ability to apply a `BoxShadow` to the `CouponCard`
+- Updated the example
+
 ## 0.0.1+2
 
 - Removed unnecessary imports in the `example` project

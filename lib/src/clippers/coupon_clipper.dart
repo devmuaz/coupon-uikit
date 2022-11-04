@@ -28,8 +28,10 @@ class CouponClipper extends CustomClipper<Path> {
     this.curveAxis = Axis.horizontal,
     this.direction = TextDirection.ltr,
     this.clockwise = false,
-  }) : assert(curvePosition > borderRadius,
-            "'curvePosition' should be greater than the 'borderRadius'");
+  }) : assert(
+          curvePosition > borderRadius,
+          "'curvePosition' should be greater than the 'borderRadius'",
+        );
 
   /// Border radius value.
   final double borderRadius;

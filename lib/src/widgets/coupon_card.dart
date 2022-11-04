@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../clippers/coupon_clipper.dart';
+import '../painters/coupon_with_shadow_painter.dart';
 
 /// Provides a coupon card widget
 class CouponCard extends StatelessWidget {
@@ -19,6 +20,7 @@ class CouponCard extends StatelessWidget {
     this.clockwise = false,
     this.backgroundColor,
     this.decoration,
+    this.shadow,
   }) : super(key: key);
 
   /// The small child or first.
@@ -51,11 +53,27 @@ class CouponCard extends StatelessWidget {
 
   /// The background color value.
   ///
-  /// Ignored if decoration property is used.
+  /// Ignored if `decoration` property is used.
   final Color? backgroundColor;
 
-  /// The decoration of the entire widget.
+  /// The decoration of the entire widget
+  ///
+  /// Note: `boxShadow` property in the `BoxDecoration` won't do an effect,
+  /// and you should use the `shadow` property of `CouponCard` itself instead.
   final Decoration? decoration;
+
+  /// A shadow applied to the widget.
+  ///
+  /// Usage
+  /// ```dart
+  /// CouponCard(
+  ///   shadow: BoxShadow(
+  ///     color: Colors.black56,
+  ///     blurRadius: 10,
+  ///   ),
+  /// )
+  /// ```
+  final Shadow? shadow;
 
   @override
   Widget build(BuildContext context) {
@@ -75,22 +93,35 @@ class CouponCard extends StatelessWidget {
       Expanded(child: secondChild),
     ];
 
-    return ClipPath(
-      clipper: CouponClipper(
-        borderRadius: borderRadius,
-        curveRadius: curveRadius,
-        curvePosition: curvePosition,
-        curveAxis: curveAxis,
-        direction: Directionality.of(context),
-        clockwise: clockwise,
+    final clipper = CouponClipper(
+      borderRadius: borderRadius,
+      curveRadius: curveRadius,
+      curvePosition: curvePosition,
+      curveAxis: curveAxis,
+      direction: Directionality.of(context),
+      clockwise: clockwise,
+    );
+
+    const defaultShadow = Shadow(
+      color: Colors.transparent,
+      blurRadius: 0,
+    );
+
+    return CustomPaint(
+      painter: CouponWithShadowPainter(
+        shadow: shadow ?? defaultShadow,
+        clipper: clipper,
       ),
-      child: Container(
-        width: width,
-        height: height,
-        decoration: decoration ?? BoxDecoration(color: backgroundColor),
-        child: curveAxis == Axis.horizontal
-            ? Column(children: children)
-            : Row(children: children),
+      child: ClipPath(
+        clipper: clipper,
+        child: Container(
+          width: width,
+          height: height,
+          decoration: decoration ?? BoxDecoration(color: backgroundColor),
+          child: curveAxis == Axis.horizontal
+              ? Column(children: children)
+              : Row(children: children),
+        ),
       ),
     );
   }
