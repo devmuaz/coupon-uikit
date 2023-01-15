@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../clippers/coupon_clipper.dart';
-import '../painters/coupon_with_shadow_painter.dart';
+import '../painters/coupon_decoration_painter.dart';
 
 /// Provides a coupon card widget
 class CouponCard extends StatelessWidget {
@@ -21,6 +21,7 @@ class CouponCard extends StatelessWidget {
     this.backgroundColor,
     this.decoration,
     this.shadow,
+    this.border,
   }) : super(key: key);
 
   /// The small child or first.
@@ -75,6 +76,19 @@ class CouponCard extends StatelessWidget {
   /// ```
   final Shadow? shadow;
 
+  /// A custom border applied to the widget.
+  ///
+  /// Usage
+  /// ```dart
+  /// CouponCard(
+  ///   border: BorderSide(
+  ///     width: 2,
+  ///     color: Colors.black,
+  ///   ),
+  /// )
+  /// ```
+  final BorderSide? border;
+
   @override
   Widget build(BuildContext context) {
     final List<Widget> children = [
@@ -102,14 +116,10 @@ class CouponCard extends StatelessWidget {
       clockwise: clockwise,
     );
 
-    const defaultShadow = Shadow(
-      color: Colors.transparent,
-      blurRadius: 0,
-    );
-
     return CustomPaint(
-      painter: CouponWithShadowPainter(
-        shadow: shadow ?? defaultShadow,
+      painter: CouponDecorationPainter(
+        shadow: shadow,
+        border: border,
         clipper: clipper,
       ),
       child: ClipPath(

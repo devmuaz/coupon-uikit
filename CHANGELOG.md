@@ -1,3 +1,8 @@
+## 0.2.0
+
+- Added the ability to apply a `Border` to the `CouponCard`
+- Minor code changes
+
 ## 0.1.0
 
 - Added the ability to apply a `BoxShadow` to the `CouponCard`

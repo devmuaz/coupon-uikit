@@ -75,7 +75,7 @@ class CouponClipper extends CustomClipper<Path> {
     final Path path = Path();
 
     // starting point
-    path.moveTo(0, borderRadius);
+    path.moveTo(0, borderRadius - 2);
 
     // left curve
     if (curveAxis == Axis.horizontal) {
