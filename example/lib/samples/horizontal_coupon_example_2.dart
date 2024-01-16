@@ -21,14 +21,14 @@ class HorizontalCouponExample2 extends StatelessWidget {
         decoration: const BoxDecoration(
           color: secondaryColor,
         ),
-        child: Column(
+        child: const Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Expanded(
               child: Center(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
-                  children: const [
+                  children: [
                     Text(
                       '23%',
                       style: TextStyle(
@@ -49,8 +49,8 @@ class HorizontalCouponExample2 extends StatelessWidget {
                 ),
               ),
             ),
-            const Divider(color: Colors.white54, height: 0),
-            const Expanded(
+            Divider(color: Colors.white54, height: 0),
+            Expanded(
               child: Center(
                 child: Text(
                   'WINTER IS\nHERE',
@@ -69,10 +69,10 @@ class HorizontalCouponExample2 extends StatelessWidget {
       secondChild: Container(
         width: double.maxFinite,
         padding: const EdgeInsets.all(18),
-        child: Column(
+        child: const Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
+          children: [
             Text(
               'Coupon Code',
               textAlign: TextAlign.center,

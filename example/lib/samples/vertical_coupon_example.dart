@@ -21,9 +21,9 @@ class VerticalCouponExample extends StatelessWidget {
           end: Alignment.bottomRight,
         ),
       ),
-      firstChild: Column(
+      firstChild: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
+        children: [
           Text(
             'CHIRISTMAS SALES',
             style: TextStyle(

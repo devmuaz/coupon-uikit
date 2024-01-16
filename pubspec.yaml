@@ -1,10 +1,10 @@
 name: coupon_uikit
 description: A UI kit that contains clippers and widgets which implements the shape of the coupon cards
-version: 0.2.0
+version: 0.2.1
 homepage: https://github.com/devmuaz/coupon_uikit
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=3.0.1 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:

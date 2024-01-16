@@ -1,3 +1,8 @@
+## 0.2.1
+
+- Updated Dart SDK to `v3.0.1`
+- Minor code improvements in the `example` directory
+
 ## 0.2.0
 
 - Added the ability to apply a `Border` to the `CouponCard`

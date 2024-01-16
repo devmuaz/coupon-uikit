@@ -28,11 +28,11 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Coupon Cards Demo')),
-      body: Padding(
-        padding: const EdgeInsets.all(14),
+      body: const Padding(
+        padding: EdgeInsets.all(14),
         child: SingleChildScrollView(
           child: Column(
-            children: const [
+            children: [
               HorizontalCouponExample1(),
               SizedBox(height: 14),
               VerticalCouponExample(),
