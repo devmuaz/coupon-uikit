@@ -1,3 +1,22 @@
+## 0.3.0
+- Enhanced existing `CouponCard` widget with improved documentation and code structure
+- Improved code organization with better separation of concerns
+- Added comprehensive documentation for all classes and methods
+- Updated example app with showcase screen displaying all available widgets
+- Added new example widgets:
+  - Basic Coupon Cards
+  - Basic Coupon Cards 2
+  - Rounded Coupon Cards
+  - Bordered Coupon Cards
+  - Vertical Coupon Cards
+  - Gradient Coupon Cards
+  - Custom Styled Coupons
+- Improved `CouponClipper` with better documentation
+- Enhanced `CouponDecorationPainter` for better shadow and border rendering
+- Updated to support Dart's SDK `^3.10.4`
+- Code cleanup and refactoring for better maintainability
+- Updated example app structure for better organization
+
 ## 0.2.1
 
 - Updated Dart SDK to `v3.0.1`

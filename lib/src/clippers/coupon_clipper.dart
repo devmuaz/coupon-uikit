@@ -1,6 +1,27 @@
 import 'package:flutter/material.dart';
 
-/// Clips a widget to the form of a coupon card shape
+/// Clips a widget to the form of a coupon card shape.
+///
+/// This clipper creates a coupon card shape with curved cutouts on one side
+/// (either horizontal or vertical) that separate two sections of the card.
+///
+/// Example:
+/// ```dart
+/// ClipPath(
+///   clipper: CouponClipper(
+///     borderRadius: 8,
+///     curveRadius: 20,
+///     curvePosition: 100,
+///     curveAxis: Axis.horizontal,
+///     direction: Directionality.of(context),
+///   ),
+///   child: Container(
+///     width: 350,
+///     height: 400,
+///     color: Colors.purple,
+///   ),
+/// )
+/// ```
 class CouponClipper extends CustomClipper<Path> {
   /// Paints a coupon shape around any widget.
   ///
