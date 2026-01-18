@@ -77,7 +77,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  coupon_uikit: ^1.0.0
+  coupon_uikit: ^latest
 ```
 
 Then run:
